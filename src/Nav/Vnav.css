@@ -1,0 +1,11 @@
+ul li{
+    list-style: none;
+    text-decoration: none;
+    display: inline;
+    height: 3rem;
+    background-color: rgba(3,3,3,0.3);
+}
+li{
+    padding: 2rem;
+    margin: 5rem;
+}
