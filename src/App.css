@@ -1,7 +1,119 @@
-.App div {
-  background-color: rgb(3,3,5);
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  background: radial-gradient(circle at top, #334fa2 0%, #101734 42%, #050914 100%);
+  color: #f8faff;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.loading-screen,
+.world-select,
+.mini-game {
+  width: min(960px, 100%);
   text-align: center;
+  border: 4px solid #b7c1ff;
+  border-radius: 16px;
+  background: rgba(7, 13, 36, 0.85);
+  box-shadow: 0 0 38px rgba(65, 133, 255, 0.38);
+  padding: 1.3rem;
+}
+
+.loading-screen h1,
+.world-copy h1,
+.mini-game h1 {
+  font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
+.loading-screen p,
+.world-copy p,
+.mini-game p,
+.hint,
+.hover-card p,
+.hud {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: xx-large;
-  color: white;
+}
+
+.loader-box {
+  width: min(620px, 100%);
+  margin: 1.15rem auto 0.7rem;
+  border: 2px solid #fff;
+  background: #10152f;
+  height: 24px;
+}
+
+.loader-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #53ffdc, #84a9ff);
+  transition: width 0.04s linear;
+}
+
+.three-stage {
+  width: 100%;
+  height: min(60vh, 450px);
+  cursor: pointer;
+}
+
+.hover-card {
+  margin: 0.6rem auto 0;
+  width: min(540px, 100%);
+  border: 2px solid var(--planet-color, #6a82ff);
+  background: rgba(11, 17, 49, 0.9);
+  padding: 0.8rem;
+}
+
+.hover-card h2 {
+  margin: 0.2rem 0;
+  color: var(--planet-color, #d5deff);
+  font-size: 1.1rem;
+}
+
+.hud {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.7rem 0;
+  font-weight: bold;
+}
+
+.mini-canvas {
+  border: 3px solid var(--planet-color, #6a82ff);
+  width: min(420px, 100%);
+  image-rendering: pixelated;
+  background: #0b122f;
+}
+
+.action-row {
+  margin-top: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 2px solid #fff;
+  background: #11153a;
+  color: #fff;
+  font-family: inherit;
+  text-transform: uppercase;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--planet-color, #294dbd);
 }
